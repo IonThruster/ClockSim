@@ -8,7 +8,7 @@ Component::Component()
 
 Component::Component(std::string name, size_t id)
 {
-    name_ = "name" + std::to_string(id);
+    name_ = name + std::to_string(id);
 }
 
 Component::~Component() 
