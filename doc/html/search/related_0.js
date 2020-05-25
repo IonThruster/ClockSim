@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c_27',['operator&lt;&lt;',['../classComponent.html#a7f5b667697cc2d923a0fdac1e2bee023',1,'Component']]]
+  ['assertionhandler_1397',['AssertionHandler',['../classCatch_1_1LazyExpression.html#a4301a3aa57b612dd8b6ef8461742ecab',1,'Catch::LazyExpression']]],
+  ['assertionstats_1398',['AssertionStats',['../classCatch_1_1LazyExpression.html#a64019eb137f5ce447cdc71cb80b6e7a4',1,'Catch::LazyExpression']]]
 ];

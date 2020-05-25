@@ -1,9 +1,10 @@
 var classComponent =
 [
     [ "Component", "classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f", null ],
-    [ "Init", "classComponent.html#a5a5e595fab62ba757f03becc5b101732", null ],
-    [ "Reset", "classComponent.html#a8b636cdedf6c442261b16dc0ec34b5ab", null ],
-    [ "Setup", "classComponent.html#ad8806720e9eaa65a1724343fd3bd4365", null ],
-    [ "Update", "classComponent.html#aaf2ce6dc5752072492f790ad4c7955bb", null ],
-    [ "operator<<", "classComponent.html#a7f5b667697cc2d923a0fdac1e2bee023", null ]
+    [ "Component", "classComponent.html#a71fa3411384ade014d9b9a54550a987f", null ],
+    [ "~Component", "classComponent.html#ab8378fa275af98e568a7e91d33d867af", null ],
+    [ "Init", "classComponent.html#a0bb954fe977d71269e2db01bc8a77e95", null ],
+    [ "Reset", "classComponent.html#a231f37626a6760c59fe4cd2a52222694", null ],
+    [ "Setup", "classComponent.html#a72f7d069a1384b7a06cb194ce51dd059", null ],
+    [ "Update", "classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b", null ]
 ];

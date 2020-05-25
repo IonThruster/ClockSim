@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ClockSim: Component.h Source File</title>
+<title>ClockSim: include/Component.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,35 +107,41 @@ $(document).ready(function(){initNavTree('Component_8h_source.html',''); initRes
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">bool</span> construct_done_;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> init_done_;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    public :</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;public :</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">   20</a></span>&#160;    <a class="code" href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classComponent.html#ad8806720e9eaa65a1724343fd3bd4365">   26</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#ad8806720e9eaa65a1724343fd3bd4365">Setup</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classComponent.html#a5a5e595fab62ba757f03becc5b101732">   33</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#a5a5e595fab62ba757f03becc5b101732">Init</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classComponent.html#aaf2ce6dc5752072492f790ad4c7955bb">   43</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#aaf2ce6dc5752072492f790ad4c7955bb">Update</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classComponent.html#a164be500ad3e4881e000d551e8c0b21c">   17</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code" href="classComponent.html#a164be500ad3e4881e000d551e8c0b21c">id_</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a>(std::string name, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059">   36</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059">Setup</a>() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95">   43</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95">Init</a>() = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classComponent.html#a8b636cdedf6c442261b16dc0ec34b5ab">   52</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#a8b636cdedf6c442261b16dc0ec34b5ab">Reset</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classComponent.html#a7f5b667697cc2d923a0fdac1e2bee023">   58</a></span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classComponent.html#a7f5b667697cc2d923a0fdac1e2bee023">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classComponent.html">Component</a>&amp; comp);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b">   53</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b">Update</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">   62</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">Reset</a>() = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classComponent.html#ab8378fa275af98e568a7e91d33d867af">~Component</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassComponent_html_a7f5b667697cc2d923a0fdac1e2bee023"><div class="ttname"><a href="classComponent.html#a7f5b667697cc2d923a0fdac1e2bee023">Component::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Component &amp;comp)</div><div class="ttdoc">Overload for printing the Component.</div></div>
-<div class="ttc" id="aclassComponent_html_ad8806720e9eaa65a1724343fd3bd4365"><div class="ttname"><a href="classComponent.html#ad8806720e9eaa65a1724343fd3bd4365">Component::Setup</a></div><div class="ttdeci">virtual void Setup()</div><div class="ttdoc">Sets up the Component.</div></div>
-<div class="ttc" id="aclassComponent_html_aaf2ce6dc5752072492f790ad4c7955bb"><div class="ttname"><a href="classComponent.html#aaf2ce6dc5752072492f790ad4c7955bb">Component::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Updates state info.</div></div>
-<div class="ttc" id="aclassComponent_html_a5a5e595fab62ba757f03becc5b101732"><div class="ttname"><a href="classComponent.html#a5a5e595fab62ba757f03becc5b101732">Component::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdoc">Initialize vales for the component.</div></div>
-<div class="ttc" id="aclassComponent_html_a8b636cdedf6c442261b16dc0ec34b5ab"><div class="ttname"><a href="classComponent.html#a8b636cdedf6c442261b16dc0ec34b5ab">Component::Reset</a></div><div class="ttdeci">virtual void Reset()</div><div class="ttdoc">Reset the component.</div></div>
-<div class="ttc" id="aclassComponent_html_a8775db6d1a2c1afc2e77cd3c8f39da6f"><div class="ttname"><a href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor.</div></div>
+<div class="ttc" id="aclassComponent_html_a72f7d069a1384b7a06cb194ce51dd059"><div class="ttname"><a href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059">Component::Setup</a></div><div class="ttdeci">virtual void Setup()=0</div><div class="ttdoc">Sets up the Component.</div></div>
+<div class="ttc" id="aclassComponent_html_abda56474d6ccfbdab47cb5e0cd595c2b"><div class="ttname"><a href="classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b">Component::Update</a></div><div class="ttdeci">virtual void Update()=0</div><div class="ttdoc">Updates state info.</div></div>
+<div class="ttc" id="aclassComponent_html_a8775db6d1a2c1afc2e77cd3c8f39da6f"><div class="ttname"><a href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> Component.cpp:3</div></div>
+<div class="ttc" id="aclassComponent_html_a0bb954fe977d71269e2db01bc8a77e95"><div class="ttname"><a href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95">Component::Init</a></div><div class="ttdeci">virtual void Init()=0</div><div class="ttdoc">Initialize vales for the component.</div></div>
 <div class="ttc" id="aclassComponent_html"><div class="ttname"><a href="classComponent.html">Component</a></div><div class="ttdoc">Describes a basic element of simulation.</div><div class="ttdef"><b>Definition:</b> Component.h:10</div></div>
+<div class="ttc" id="aclassComponent_html_ab8378fa275af98e568a7e91d33d867af"><div class="ttname"><a href="classComponent.html#ab8378fa275af98e568a7e91d33d867af">Component::~Component</a></div><div class="ttdeci">virtual ~Component()</div><div class="ttdoc">Overload for printing the Component.</div><div class="ttdef"><b>Definition:</b> Component.cpp:14</div></div>
+<div class="ttc" id="aclassComponent_html_a231f37626a6760c59fe4cd2a52222694"><div class="ttname"><a href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">Component::Reset</a></div><div class="ttdeci">virtual void Reset()=0</div><div class="ttdoc">Reset the component.</div></div>
+<div class="ttc" id="aclassComponent_html_a164be500ad3e4881e000d551e8c0b21c"><div class="ttname"><a href="classComponent.html#a164be500ad3e4881e000d551e8c0b21c">Component::id_</a></div><div class="ttdeci">static size_t id_</div><div class="ttdef"><b>Definition:</b> Component.h:17</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="Component_8h.html">Component.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="Component_8h.html">Component.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.19 </li>
