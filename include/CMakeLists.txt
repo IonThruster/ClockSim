@@ -1,8 +1,11 @@
 add_library(
     clocksim
+    ClockSim.h
     Component.h
     Register.h
-    Component.cpp
+    Ports.h
+    Combo.h
+    Module.h
 )
 
 set_target_properties(clocksim PROPERTIES 

@@ -14,26 +14,45 @@ class Component
 
 public :
 
-    static size_t id_;
-
-    /// Default constructor
-    ///
-    /// Gives the instance a automatic name using a ID
-    /// @note Try using the constructor with name, id for easier debugging
-    Component();
-
     /// constructor with name, id
+    /// Default constructor - is disabled
     ///
     /// Gives the instance a name using the parameters passed
     /// @param name Name of the component being instantiated
-    /// @param id Unique ID of the component
-    Component(std::string name, size_t id);
+    Component(std::string name) 
+    : name_(name) {}
 
     /// Sets up the Component
     ///
     /// Sets up all the connections between components.
     /// @attention Should be called only once at the start
-    virtual void Setup() = 0;
+    virtual void Configure() = 0;
+
+    /// Updates state info. for the component
+    ///
+    /// At the rising egde of the clock, the state information of the component needs to be updated.
+    /// this method is used to update the state.
+    /// @note Should be called every clock - this simulates the pos-edge of clock.
+    /// @attention Should be called only after ( Setup() or Reset() )
+    /// @see Setup() Reset()
+    virtual void Update() = 0;
+
+    /// Asynchronous Reset
+    ///
+    /// Resets the component back to the initial value, and calls Init()
+    /// @note Should be called only if necessary, and after Setup()
+    /// @see Setup()
+    /// @warning Reset propogation is done automatically, and Reset() will be called on all connected Components.
+    virtual void Reset() = 0;
+
+    /// Overload if necessary, for dumping signals
+    /// Goal is to generate waveforms using this
+    void DumpState(){ };
+
+    /// Destructor
+    virtual ~Component() { };
+
+private:
 
     /// Initialize vales for the component
     ///
@@ -42,31 +61,4 @@ public :
     /// @see Setup() Reset()
     virtual void Init() = 0;
 
-
-    /// Updates state info. for the component
-    ///
-    /// At the rising egde of the clock, the state information of the component needs to be updated.
-    /// this method is used to update the state.
-    /// @note Should be called every clock - this simulates the pos-edge of clock.
-    /// @attention Should be called only after ( Setup() or Reset() ) and Init()
-    /// @see Setup() Reset() Init()
-    virtual void Update() = 0;
-
-
-    /// Reset the component
-    ///
-    /// Resets the component back to the initial value, and calls Init()
-    /// @note Should be called only if necessary, and after Setup()
-    /// @see Setup()
-    /// @warning Reset propogation is done automatically, and Reset() will be called on all connected Components.
-    virtual void Reset() = 0;
-
-    /// Overload for printing the Component
-    /// 
-    /// @param os This is the Ostream object
-    /// @param comp Reference to the current Component instance
-    /// friend std::ostream& operator<<(std::ostream& os, const Component& comp);
-
-    /// Destructor
-    virtual ~Component();
 };

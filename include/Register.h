@@ -1,8 +1,7 @@
 #pragma once
 
 #include "Component.h"
-#include <vector>
-
+#include "Ports.h"
 
 /// Component which represents a D-Flip Flop.
 ///
@@ -10,63 +9,60 @@
 template <typename T>
 class Register : public Component
 {
-    const size_t kLatency_;
     const size_t kCapacity_;
     std::vector<T> values_;
-    static size_t id_;
+    Port<T>* in_;
+    Port<T>* out_;
 
 public :
 
     /// Single Flop
-    Register()
-    	: Component("Reg", id_), kLatency_(1), kCapacity_(1) {
-			id_++;
+    Register(std::string name)
+    	: Register(name, 1, 1) {
 		}
 
-    /// Flop of certain capacity, and latency
+    /// Flop of certain capacity, Flop can contain arbitrary datatypes
     ///
     /// @param capacity Numebr of elements the flop can hold
-    /// @param latency Latency of the flop
-    Register(size_t capacity, size_t latency)
-    	: Component("Reg", id_), kLatency_(latency), kCapacity_(capacity) {
-			id_++;
+    Register(std::string name, size_t capacity)
+    	: Component(name), kCapacity_(capacity) {
 		}
 
     /// Setup the connections
-    void Setup() 
+    void Configure() 
 		{
 		}
 
     /// Initial value for the Flop
     void Init()
 		{
+      for(size_t i = 0; i < kCapacity_; i++)
+      {
+        values_.push_back(T(0));
+      }
 		}
 
     /// What to do at the rising edge of the clock
     void Update()
 		{
+      out_->assign(values_[kCapacity_-1]);
+
+      for(size_t i = 1; i < kCapacity_; i++) {
+        values_[i] = values_[i-1];
+      }
+
+      values_[0] = in_->value();
 		}
 
     /// What to do during Reset
     void Reset()
 		{
-		}
-
-    /// Push value into a Flop
-    void Push()
-		{
-		}
-
-    /// Pop value from the Flop
-    void Pop()
-		{
+      for(size_t i = 0; i < kCapacity_; i++) {
+        values_[i] = T(0);
+      } 
 		}
 
     ~Register()
 		{
 		}
 };
-
-
-template <typename T>
-size_t Register<T>::id_ = 0;
