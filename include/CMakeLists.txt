@@ -6,6 +6,7 @@ add_library(
     Ports.h
     Combo.h
     Module.h
+    Simulator.h
 )
 
 set_target_properties(clocksim PROPERTIES 

@@ -53,7 +53,7 @@ public :
 
     }
 
-    void Update()
+    void Update(size_t)
     {
 
     }

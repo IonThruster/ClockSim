@@ -24,12 +24,14 @@ public :
 	}
 
     /// What to do at the rising edge of the clock
-    void Update()
-	{
+    ///
+    /// WHoever inherits MUST implement this
+    void Update(size_t)
+    {
+        Logic();
+    }
 
-	}
-
-    void logic()
+    void Logic()
     {
 
     }

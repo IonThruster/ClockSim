@@ -35,7 +35,7 @@ public :
     /// @note Should be called every clock - this simulates the pos-edge of clock.
     /// @attention Should be called only after ( Setup() or Reset() )
     /// @see Setup() Reset()
-    virtual void Update() = 0;
+    virtual void Update(size_t clock) = 0;
 
     /// Asynchronous Reset
     ///

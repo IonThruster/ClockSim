@@ -43,7 +43,7 @@ public :
 		}
 
     /// What to do at the rising edge of the clock
-    void Update()
+    void Update(size_t)
 		{
       out_->assign(values_[kCapacity_-1]);
 
