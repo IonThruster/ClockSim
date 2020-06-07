@@ -1,3 +1,5 @@
+add_subdirectory(vcd_generator)
+
 add_library(
     clocksim
     ClockSim.h
@@ -9,10 +11,15 @@ add_library(
     Simulator.h
 )
 
+target_link_libraries(clocksim vcdgen)
+
 set_target_properties(clocksim PROPERTIES 
 		LINKER_LANGUAGE CXX
 		CXX_STANDARD 11
 		CXX_STANDARD_REQUIRED YES
+        	LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib64
 )
 
 target_include_directories(clocksim PUBLIC "${CURRENT_CMAKE_SOURCE_DIR}")
+
+message("PROJECT_BINARY_DIR is ${PROJECT_BINARY_DIR}")

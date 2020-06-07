@@ -9,7 +9,7 @@ add_subdirectory(include)
 add_subdirectory(catch)
 add_subdirectory(tests)
 
-enable_testing()
+#enable_testing()
 
 message("CMAKE_CXX_FLAGS_DEBUG is ${CMAKE_CXX_FLAGS_DEBUG}")
 message("CMAKE_CXX_FLAGS_RELEASE is ${CMAKE_CXX_FLAGS_RELEASE}")
