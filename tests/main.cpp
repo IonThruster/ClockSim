@@ -4,6 +4,8 @@
 #include <iostream>
 #include <ClockSim.h>
 #include <stdlib.h>
+#include <list>
+#include <tuple>
 
 bool Simulate() {
     
@@ -66,6 +68,20 @@ public:
         *inputs_[0] = 0;
         *inputs_[1] = 0;
     }
+
+    void generate_vcd_info(std::list< std::tuple<std::string, uint16_t> > &dumplist)
+    {
+        dumplist.push_back({"IN_1", 1});
+        dumplist.push_back({"IN_2", 1});
+        dumplist.push_back({"OUT", 1});
+    }
+
+    void DumpSignals(std::string module_name)
+    {
+        signal_dumper.dump_signal(module_name + "_IN_1", convert<bool, 1>(inputs_[0]->value()));
+        signal_dumper.dump_signal(module_name + "_IN_2", convert<bool, 1>(inputs_[1]->value()));
+        signal_dumper.dump_signal(module_name + "_OUT", convert<bool, 1>(outputs_[0]->value()));
+    }
 };
 
 bool Simulate_And()
@@ -75,7 +91,7 @@ bool Simulate_And()
     // 2. Add an And Gate logic
     // 3. Simulate and get result of 2 random inputs.
 
-    Module top ("TOP_LEVEL");
+    Module top ("TOP_LEVEL", true);
 
     Port<bool> p1("in1");
     Port<bool> p2("in2");
@@ -86,7 +102,7 @@ bool Simulate_And()
 
     top.add(&a);
 
-    Simulator And_Sim(&top);
+    Simulator And_Sim(&top, 100, true);
 
     if( And_Sim.Run() == SIMULATOR_STATUS::SUCCESS )
     {

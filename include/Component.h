@@ -1,6 +1,10 @@
 #pragma once
 
+#include <vcdgen.h>
+#include <bitset>
 #include <string>
+#include <list>
+#include <tuple>
 
 /// Describes a basic element of simulation.
 ///
@@ -8,11 +12,23 @@
 /// A system consists of Components connected using Nodes.
 class Component 
 {
-    std::string name_;
+    // std::string name_;
     bool construct_done_;
     bool init_done_;
 
+protected :    
+    
+    template<typename T, int width>
+    inline std::string convert(T val)
+    {
+      return std::bitset<width>(val).to_string();
+    }
+
 public :
+
+    std::string name_;
+
+    static VcdGen::VcdGenerator signal_dumper;
 
     /// constructor with name, id
     /// Default constructor - is disabled
@@ -47,7 +63,10 @@ public :
 
     /// Overload if necessary, for dumping signals
     /// Goal is to generate waveforms using this
-    void DumpState(){ };
+    virtual void generate_vcd_info(std::list< std::tuple<std::string, uint16_t> >&) = 0;
+
+    virtual void DumpSignals(std::string) = 0;
+
 
     /// Destructor
     virtual ~Component() { };
@@ -62,3 +81,5 @@ private:
     virtual void Init() = 0;
 
 };
+
+VcdGen::VcdGenerator Component::signal_dumper{};

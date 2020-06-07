@@ -42,7 +42,11 @@ public :
 
     }
 
-    void Init() = 0;
+    virtual void Init() = 0;
+
+    virtual void generate_vcd_info(std::list< std::tuple<std::string, uint16_t> >&) = 0;
+
+    virtual void DumpSignals(std::string) = 0;
 
     ~Combinatorial()
 	{

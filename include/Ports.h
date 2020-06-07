@@ -58,5 +58,9 @@ public :
 
     }
 
+    virtual void generate_vcd_info(std::list< std::tuple<std::string, uint16_t> >&) { };
+
+    virtual void DumpSignals(std::string) { };
+
     ~Port(){ }
 };
