@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type_1347',['type',['../structCatch_1_1Generators_1_1IGenerator.html#a1f8677875fe0ff31f39c60d45504b9a5',1,'Catch::Generators::IGenerator']]]
+  ['size_5ftype_1430',['size_type',['../classCatch_1_1StringRef.html#a06b4db8fc82b197004291cf370b2ba7c',1,'Catch::StringRef']]],
+  ['stringmatcher_1431',['StringMatcher',['../namespaceCatch.html#aba438977e831821a2eeca82b9b4f4af2',1,'Catch']]]
 ];

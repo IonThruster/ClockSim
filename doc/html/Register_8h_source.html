@@ -100,75 +100,83 @@ $(document).ready(function(){initNavTree('Register_8h_source.html',''); initResi
 <a href="Register_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Component_8h.html">Component.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Ports_8h.html">Ports.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classRegister.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegister.html">Register</a> : <span class="keyword">public</span> <a class="code" href="classComponent.html">Component</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> kLatency_;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> kCapacity_;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::vector&lt;T&gt; values_;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> id_;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classRegister.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegister.html">Register</a> : <span class="keyword">public</span> <a class="code" href="classComponent.html">Component</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> kCapacity_;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::vector&lt;T&gt; values_;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;public :</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classRegister.html#a37f6e0046c2bf25d0841f40a77e6be90">   21</a></span>&#160;    <a class="code" href="classRegister.html#a37f6e0046c2bf25d0841f40a77e6be90">Register</a>()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        : <a class="code" href="classComponent.html">Component</a>(<span class="stringliteral">&quot;Reg&quot;</span>, id_), kLatency_(1), kCapacity_(1) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            id_++;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classPort.html">Port&lt;T&gt;</a>* in_;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classPort.html">Port&lt;T&gt;</a>* out_;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;public :</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classRegister.html#a0181ab698cbe992e53ea7b3eaefb2188">   30</a></span>&#160;    <a class="code" href="classRegister.html#a0181ab698cbe992e53ea7b3eaefb2188">Register</a>(<span class="keywordtype">size_t</span> capacity, <span class="keywordtype">size_t</span> latency)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        : <a class="code" href="classComponent.html">Component</a>(<span class="stringliteral">&quot;Reg&quot;</span>, id_), kLatency_(latency), kCapacity_(capacity) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            id_++;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRegister.html#ae5763bc252be48dcc40d2ff77f7a0d8a">   36</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#ae5763bc252be48dcc40d2ff77f7a0d8a">Setup</a>() </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">Init</a>()</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classRegister.html#abe7f49d6bb902ae892900d5c0647b3d3">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#abe7f49d6bb902ae892900d5c0647b3d3">Update</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">   51</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Reset</a>()</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classRegister.html#a788431590d2736512cb5b5862f77c03c">   56</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a788431590d2736512cb5b5862f77c03c">Push</a>()</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classRegister.html#a586151ca11a51dac20e74426baa7715e">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a586151ca11a51dac20e74426baa7715e">Pop</a>()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">   65</a></span>&#160;    <a class="code" href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">~Register</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classRegister.html#acc0a91ee6ab71beb21d02ba15fcfc196">   27</a></span>&#160;    <a class="code" href="classRegister.html#acc0a91ee6ab71beb21d02ba15fcfc196">Register</a>(std::string name)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        : <a class="code" href="classRegister.html">Register</a>(name, 1, 1) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRegister.html#a41db048dfa00f830223198e098490e6a">   34</a></span>&#160;    <a class="code" href="classRegister.html#a41db048dfa00f830223198e098490e6a">Register</a>(std::string name, <span class="keywordtype">size_t</span> capacity)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        : <a class="code" href="classComponent.html">Component</a>(name), kCapacity_(capacity) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classRegister.html#a9f7dfcf1e8ef05e9510a44667572c473">   39</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a9f7dfcf1e8ef05e9510a44667572c473">Configure</a>() </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">Init</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; kCapacity_; i++)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        values_.push_back(T(0));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classRegister.html#af6f808f3026da6e1e6a841a37beb7e12">   53</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#af6f808f3026da6e1e6a841a37beb7e12">Update</a>(<span class="keywordtype">size_t</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      out_-&gt;<a class="code" href="classPort.html#a3a539b488df2b9caa96a61a1ad4ce0ec">assign</a>(values_[kCapacity_-1]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 1; i &lt; kCapacity_; i++) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        values_[i] = values_[i-1];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      values_[0] = in_-&gt;<a class="code" href="classPort.html#a1c2226cbb42bc4a9cc65b3482bc62a58">value</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">   65</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Reset</a>()</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classRegister.html">Register&lt;T&gt;::id_</a> = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; kCapacity_; i++) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        values_[i] = T(0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      } </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classRegister.html#aa4fc222db1b9ae88454cc24f69428196">   73</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classRegister.html#aa4fc222db1b9ae88454cc24f69428196">generate_vcd_info</a>(std::list&lt; std::tuple&lt;std::string, uint16_t&gt; &gt; &amp;) { };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classRegister.html#a39f2d3a25c274d5e5daabde296fcbbd1">   76</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classRegister.html#a39f2d3a25c274d5e5daabde296fcbbd1">DumpSignals</a>(std::string) { };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">   79</a></span>&#160;    <a class="code" href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">~Register</a>(){ }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassRegister_html_a7c5ebba32fcba3f7aeba4cf93ab1d32d"><div class="ttname"><a href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Register::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">What to do during Reset.</div><div class="ttdef"><b>Definition:</b> Register.h:51</div></div>
-<div class="ttc" id="aclassRegister_html_abe7f49d6bb902ae892900d5c0647b3d3"><div class="ttname"><a href="classRegister.html#abe7f49d6bb902ae892900d5c0647b3d3">Register::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">What to do at the rising edge of the clock.</div><div class="ttdef"><b>Definition:</b> Register.h:46</div></div>
-<div class="ttc" id="aclassRegister_html"><div class="ttname"><a href="classRegister.html">Register</a></div><div class="ttdoc">Component which represents a D-Flip Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:12</div></div>
-<div class="ttc" id="aclassRegister_html_ad5b04c4d87e4e45ba29149fb44534a56"><div class="ttname"><a href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">Register::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Initial value for the Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:41</div></div>
-<div class="ttc" id="aclassRegister_html_a0181ab698cbe992e53ea7b3eaefb2188"><div class="ttname"><a href="classRegister.html#a0181ab698cbe992e53ea7b3eaefb2188">Register::Register</a></div><div class="ttdeci">Register(size_t capacity, size_t latency)</div><div class="ttdoc">Flop of certain capacity, and latency.</div><div class="ttdef"><b>Definition:</b> Register.h:30</div></div>
-<div class="ttc" id="aclassRegister_html_a586151ca11a51dac20e74426baa7715e"><div class="ttname"><a href="classRegister.html#a586151ca11a51dac20e74426baa7715e">Register::Pop</a></div><div class="ttdeci">void Pop()</div><div class="ttdoc">Pop value from the Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:61</div></div>
+<div class="ttc" id="aclassPort_html_a3a539b488df2b9caa96a61a1ad4ce0ec"><div class="ttname"><a href="classPort.html#a3a539b488df2b9caa96a61a1ad4ce0ec">Port::assign</a></div><div class="ttdeci">void assign(T val)</div><div class="ttdoc">Assign a value to the &quot;Wire&quot;.</div><div class="ttdef"><b>Definition:</b> Ports.h:37</div></div>
+<div class="ttc" id="aclassRegister_html_a9f7dfcf1e8ef05e9510a44667572c473"><div class="ttname"><a href="classRegister.html#a9f7dfcf1e8ef05e9510a44667572c473">Register::Configure</a></div><div class="ttdeci">void Configure()</div><div class="ttdoc">Setup the connections.</div><div class="ttdef"><b>Definition:</b> Register.h:39</div></div>
+<div class="ttc" id="aclassRegister_html_a7c5ebba32fcba3f7aeba4cf93ab1d32d"><div class="ttname"><a href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Register::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">What to do during Reset.</div><div class="ttdef"><b>Definition:</b> Register.h:65</div></div>
+<div class="ttc" id="aclassRegister_html_af6f808f3026da6e1e6a841a37beb7e12"><div class="ttname"><a href="classRegister.html#af6f808f3026da6e1e6a841a37beb7e12">Register::Update</a></div><div class="ttdeci">void Update(size_t)</div><div class="ttdoc">What to do at the rising edge of the clock.</div><div class="ttdef"><b>Definition:</b> Register.h:53</div></div>
+<div class="ttc" id="aclassRegister_html_aa4fc222db1b9ae88454cc24f69428196"><div class="ttname"><a href="classRegister.html#aa4fc222db1b9ae88454cc24f69428196">Register::generate_vcd_info</a></div><div class="ttdeci">virtual void generate_vcd_info(std::list&lt; std::tuple&lt; std::string, uint16_t &gt; &gt; &amp;)</div><div class="ttdoc">VCD Signal declaration info (TODO)</div><div class="ttdef"><b>Definition:</b> Register.h:73</div></div>
+<div class="ttc" id="aclassRegister_html"><div class="ttname"><a href="classRegister.html">Register</a></div><div class="ttdoc">Component which represents a D-Flip Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:11</div></div>
+<div class="ttc" id="aclassRegister_html_ad5b04c4d87e4e45ba29149fb44534a56"><div class="ttname"><a href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">Register::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Initial value for the Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:44</div></div>
+<div class="ttc" id="aclassRegister_html_acc0a91ee6ab71beb21d02ba15fcfc196"><div class="ttname"><a href="classRegister.html#acc0a91ee6ab71beb21d02ba15fcfc196">Register::Register</a></div><div class="ttdeci">Register(std::string name)</div><div class="ttdoc">Ctor.</div><div class="ttdef"><b>Definition:</b> Register.h:27</div></div>
+<div class="ttc" id="aclassPort_html"><div class="ttname"><a href="classPort.html">Port</a></div><div class="ttdoc">Component which represents a WIRE.</div><div class="ttdef"><b>Definition:</b> Ports.h:14</div></div>
+<div class="ttc" id="aclassRegister_html_a39f2d3a25c274d5e5daabde296fcbbd1"><div class="ttname"><a href="classRegister.html#a39f2d3a25c274d5e5daabde296fcbbd1">Register::DumpSignals</a></div><div class="ttdeci">virtual void DumpSignals(std::string)</div><div class="ttdoc">VCD Signal Dumping info (TODO)</div><div class="ttdef"><b>Definition:</b> Register.h:76</div></div>
 <div class="ttc" id="aComponent_8h_html"><div class="ttname"><a href="Component_8h.html">Component.h</a></div></div>
-<div class="ttc" id="aclassRegister_html_ae5763bc252be48dcc40d2ff77f7a0d8a"><div class="ttname"><a href="classRegister.html#ae5763bc252be48dcc40d2ff77f7a0d8a">Register::Setup</a></div><div class="ttdeci">void Setup()</div><div class="ttdoc">Setup the connections.</div><div class="ttdef"><b>Definition:</b> Register.h:36</div></div>
-<div class="ttc" id="aclassRegister_html_a6ea38ad87b77e21ce8eaeb1aefd29cad"><div class="ttname"><a href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">Register::~Register</a></div><div class="ttdeci">~Register()</div><div class="ttdef"><b>Definition:</b> Register.h:65</div></div>
-<div class="ttc" id="aclassComponent_html"><div class="ttname"><a href="classComponent.html">Component</a></div><div class="ttdoc">Describes a basic element of simulation.</div><div class="ttdef"><b>Definition:</b> Component.h:10</div></div>
-<div class="ttc" id="aclassRegister_html_a788431590d2736512cb5b5862f77c03c"><div class="ttname"><a href="classRegister.html#a788431590d2736512cb5b5862f77c03c">Register::Push</a></div><div class="ttdeci">void Push()</div><div class="ttdoc">Push value into a Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:56</div></div>
-<div class="ttc" id="aclassRegister_html_a37f6e0046c2bf25d0841f40a77e6be90"><div class="ttname"><a href="classRegister.html#a37f6e0046c2bf25d0841f40a77e6be90">Register::Register</a></div><div class="ttdeci">Register()</div><div class="ttdoc">Single Flop.</div><div class="ttdef"><b>Definition:</b> Register.h:21</div></div>
+<div class="ttc" id="aclassPort_html_a1c2226cbb42bc4a9cc65b3482bc62a58"><div class="ttname"><a href="classPort.html#a1c2226cbb42bc4a9cc65b3482bc62a58">Port::value</a></div><div class="ttdeci">T value()</div><div class="ttdoc">Returns Temporary value in the &quot;Wire&quot;.</div><div class="ttdef"><b>Definition:</b> Ports.h:31</div></div>
+<div class="ttc" id="aclassRegister_html_a6ea38ad87b77e21ce8eaeb1aefd29cad"><div class="ttname"><a href="classRegister.html#a6ea38ad87b77e21ce8eaeb1aefd29cad">Register::~Register</a></div><div class="ttdeci">~Register()</div><div class="ttdoc">Dtor.</div><div class="ttdef"><b>Definition:</b> Register.h:79</div></div>
+<div class="ttc" id="aclassRegister_html_a41db048dfa00f830223198e098490e6a"><div class="ttname"><a href="classRegister.html#a41db048dfa00f830223198e098490e6a">Register::Register</a></div><div class="ttdeci">Register(std::string name, size_t capacity)</div><div class="ttdoc">Flop of certain capacity, Flop can contain arbitrary datatypes.</div><div class="ttdef"><b>Definition:</b> Register.h:34</div></div>
+<div class="ttc" id="aPorts_8h_html"><div class="ttname"><a href="Ports_8h.html">Ports.h</a></div></div>
+<div class="ttc" id="aclassComponent_html"><div class="ttname"><a href="classComponent.html">Component</a></div><div class="ttdoc">Describes a basic element of simulation.</div><div class="ttdef"><b>Definition:</b> Component.h:14</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

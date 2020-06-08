@@ -9,4 +9,7 @@ Some highlights :
 
 Goals : 
 1. Enable rapid prototyping of Architectures
-2. Excellent debug-ability and visualization capabilities
+2. Excellent debug-ability and visualization capabilities just like RTL
+
+Example :
+![Sample VCD waveform](images/and_gate.png)

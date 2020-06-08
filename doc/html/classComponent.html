@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('classComponent.html',''); initResizabl
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classComponent-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Component Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -112,102 +113,55 @@ Inheritance diagram for Component:</div>
  <div class="center">
   <img src="classComponent.png" usemap="#Component_map" alt=""/>
   <map id="Component_map" name="Component_map">
-<area href="classRegister.html" title="Component which represents a D-Flip Flop." alt="Register&lt; T &gt;" shape="rect" coords="0,56,89,80"/>
+<area href="classCombinatorial.html" title="Component which represents a Combo Loigc." alt="Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;" shape="rect" coords="0,56,362,80"/>
+<area href="classCombinatorial.html" alt="Combinatorial&lt; bool, 2, bool, 1 &gt;" shape="rect" coords="372,56,734,80"/>
+<area href="classPort.html" title="Component which represents a WIRE." alt="Port&lt; T &gt;" shape="rect" coords="744,56,1106,80"/>
+<area href="classRegister.html" title="Component which represents a D-Flip Flop." alt="Register&lt; T &gt;" shape="rect" coords="1116,56,1478,80"/>
+<area href="classAndGate.html" alt="AndGate" shape="rect" coords="372,112,734,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a> ()</td></tr>
-<tr class="memdesc:a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classComponent.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">More...</a><br /></td></tr>
-<tr class="separator:a8775db6d1a2c1afc2e77cd3c8f39da6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71fa3411384ade014d9b9a54550a987f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a71fa3411384ade014d9b9a54550a987f">Component</a> (std::string name, size_t id)</td></tr>
-<tr class="memdesc:a71fa3411384ade014d9b9a54550a987f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with name, id  <a href="classComponent.html#a71fa3411384ade014d9b9a54550a987f">More...</a><br /></td></tr>
-<tr class="separator:a71fa3411384ade014d9b9a54550a987f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72f7d069a1384b7a06cb194ce51dd059"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059">Setup</a> ()=0</td></tr>
-<tr class="memdesc:a72f7d069a1384b7a06cb194ce51dd059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>.  <a href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059">More...</a><br /></td></tr>
-<tr class="separator:a72f7d069a1384b7a06cb194ce51dd059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb954fe977d71269e2db01bc8a77e95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95">Init</a> ()=0</td></tr>
-<tr class="memdesc:a0bb954fe977d71269e2db01bc8a77e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize vales for the component.  <a href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95">More...</a><br /></td></tr>
-<tr class="separator:a0bb954fe977d71269e2db01bc8a77e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abda56474d6ccfbdab47cb5e0cd595c2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b">Update</a> ()=0</td></tr>
-<tr class="memdesc:abda56474d6ccfbdab47cb5e0cd595c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates state info.  <a href="classComponent.html#abda56474d6ccfbdab47cb5e0cd595c2b">More...</a><br /></td></tr>
-<tr class="separator:abda56474d6ccfbdab47cb5e0cd595c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e63a4b118bc00de247466c3c128e7bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a7e63a4b118bc00de247466c3c128e7bc">Component</a> (std::string name)</td></tr>
+<tr class="memdesc:a7e63a4b118bc00de247466c3c128e7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with name, id Default constructor - is disabled  <a href="classComponent.html#a7e63a4b118bc00de247466c3c128e7bc">More...</a><br /></td></tr>
+<tr class="separator:a7e63a4b118bc00de247466c3c128e7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5437b3482ae565d6f6f2934d1c40c238"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a5437b3482ae565d6f6f2934d1c40c238">Configure</a> ()=0</td></tr>
+<tr class="memdesc:a5437b3482ae565d6f6f2934d1c40c238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>.  <a href="classComponent.html#a5437b3482ae565d6f6f2934d1c40c238">More...</a><br /></td></tr>
+<tr class="separator:a5437b3482ae565d6f6f2934d1c40c238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07d4503ca5c2fb1564fdd2a63598d8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#af07d4503ca5c2fb1564fdd2a63598d8b">Update</a> (size_t clock)=0</td></tr>
+<tr class="memdesc:af07d4503ca5c2fb1564fdd2a63598d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates state info.  <a href="classComponent.html#af07d4503ca5c2fb1564fdd2a63598d8b">More...</a><br /></td></tr>
+<tr class="separator:af07d4503ca5c2fb1564fdd2a63598d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231f37626a6760c59fe4cd2a52222694"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">Reset</a> ()=0</td></tr>
-<tr class="memdesc:a231f37626a6760c59fe4cd2a52222694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the component.  <a href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">More...</a><br /></td></tr>
+<tr class="memdesc:a231f37626a6760c59fe4cd2a52222694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous Reset.  <a href="classComponent.html#a231f37626a6760c59fe4cd2a52222694">More...</a><br /></td></tr>
 <tr class="separator:a231f37626a6760c59fe4cd2a52222694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8378fa275af98e568a7e91d33d867af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#ab8378fa275af98e568a7e91d33d867af">~Component</a> ()</td></tr>
-<tr class="memdesc:ab8378fa275af98e568a7e91d33d867af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for printing the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>.  <a href="classComponent.html#ab8378fa275af98e568a7e91d33d867af">More...</a><br /></td></tr>
-<tr class="separator:ab8378fa275af98e568a7e91d33d867af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a48aa3173fa7af3dffbc4d6374cf20"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#ac5a48aa3173fa7af3dffbc4d6374cf20">generate_vcd_info</a> (std::list&lt; std::tuple&lt; std::string, uint16_t &gt; &gt; &amp;)=0</td></tr>
+<tr class="memdesc:ac5a48aa3173fa7af3dffbc4d6374cf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload if necessary, for dumping signals Goal is to generate waveforms using this.  <a href="classComponent.html#ac5a48aa3173fa7af3dffbc4d6374cf20">More...</a><br /></td></tr>
+<tr class="separator:ac5a48aa3173fa7af3dffbc4d6374cf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03cfb4394b9a124169d9309a215ceee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#ab03cfb4394b9a124169d9309a215ceee">DumpSignals</a> (std::string)=0</td></tr>
+<tr class="separator:ab03cfb4394b9a124169d9309a215ceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9aa4348314d981f05f67397ad2f872"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
+<tr class="memdesc:a2e9aa4348314d981f05f67397ad2f872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classComponent.html#a2e9aa4348314d981f05f67397ad2f872">More...</a><br /></td></tr>
+<tr class="separator:a2e9aa4348314d981f05f67397ad2f872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a164be500ad3e4881e000d551e8c0b21c"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a164be500ad3e4881e000d551e8c0b21c">id_</a> = 0</td></tr>
-<tr class="separator:a164be500ad3e4881e000d551e8c0b21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a87b06d1bc7c180e00ad4297118b1f4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVcdGen_1_1VcdGenerator.html">VcdGen::VcdGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a8a87b06d1bc7c180e00ad4297118b1f4">signal_dumper</a> {}</td></tr>
+<tr class="memdesc:a8a87b06d1bc7c180e00ad4297118b1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object which helps with dumping the VCD.  <a href="classComponent.html#a8a87b06d1bc7c180e00ad4297118b1f4">More...</a><br /></td></tr>
+<tr class="separator:a8a87b06d1bc7c180e00ad4297118b1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:abcf0f5f425cd233ea3baa86509c95970"><td class="memTemplParams" colspan="2">template&lt;typename T , int width&gt; </td></tr>
+<tr class="memitem:abcf0f5f425cd233ea3baa86509c95970"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classComponent.html#abcf0f5f425cd233ea3baa86509c95970">convert</a> (T val)</td></tr>
+<tr class="separator:abcf0f5f425cd233ea3baa86509c95970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes a basic element of simulation. </p>
 <p><a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a> is the basic element of all simulations and the base class A system consists of Components connected using Nodes. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8775db6d1a2c1afc2e77cd3c8f39da6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8775db6d1a2c1afc2e77cd3c8f39da6f">&#9670;&nbsp;</a></span>Component() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Component::Component </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default constructor. </p>
-<p>Gives the instance a automatic name using a ID </p><dl class="section note"><dt>Note</dt><dd>Try using the constructor with name, id for easier debugging </dd></dl>
-
-</div>
-</div>
-<a id="a71fa3411384ade014d9b9a54550a987f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71fa3411384ade014d9b9a54550a987f">&#9670;&nbsp;</a></span>Component() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Component::Component </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>constructor with name, id </p>
-<p>Gives the instance a name using the parameters passed </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Name of the component being instantiated </td></tr>
-    <tr><td class="paramname">id</td><td>Unique ID of the component </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab8378fa275af98e568a7e91d33d867af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8378fa275af98e568a7e91d33d867af">&#9670;&nbsp;</a></span>~Component()</h2>
+<a id="a7e63a4b118bc00de247466c3c128e7bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e63a4b118bc00de247466c3c128e7bc">&#9670;&nbsp;</a></span>Component()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +170,41 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Component::~Component </td>
+          <td class="memname">Component::Component </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor with name, id Default constructor - is disabled </p>
+<p>Gives the instance a name using the parameters passed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the component being instantiated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e9aa4348314d981f05f67397ad2f872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9aa4348314d981f05f67397ad2f872">&#9670;&nbsp;</a></span>~Component()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Component::~Component </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -224,25 +212,18 @@ Static Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Overload for printing the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">os</td><td>This is the Ostream object </td></tr>
-    <tr><td class="paramname">comp</td><td>Reference to the current <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a> instance friend std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, const Component&amp; comp); Destructor </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Destructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0bb954fe977d71269e2db01bc8a77e95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bb954fe977d71269e2db01bc8a77e95">&#9670;&nbsp;</a></span>Init()</h2>
+<a id="a5437b3482ae565d6f6f2934d1c40c238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5437b3482ae565d6f6f2934d1c40c238">&#9670;&nbsp;</a></span>Configure()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +232,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Component::Init </td>
+          <td class="memname">virtual void Component::Configure </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -264,11 +245,96 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initialize vales for the component. </p>
-<p>Initial value of the component post <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> </p><dl class="section attention"><dt>Attention</dt><dd>Should be called only after <a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> or <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> </dd></dl>
+<p>Sets up the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>. </p>
+<p>Sets up all the connections between components. </p><dl class="section attention"><dt>Attention</dt><dd>Should be called only once at the start </dd></dl>
 
-<p>Implemented in <a class="el" href="classRegister.html#ad5b04c4d87e4e45ba29149fb44534a56">Register&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRegister.html#a9f7dfcf1e8ef05e9510a44667572c473">Register&lt; T &gt;</a>, <a class="el" href="classPort.html#ab12ad4db8484f025a9e5b3402b389020">Port&lt; T &gt;</a>, <a class="el" href="classCombinatorial.html#aabb0142dded9a9ba6a27d67b44a883dd">Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;</a>, and <a class="el" href="classCombinatorial.html#aabb0142dded9a9ba6a27d67b44a883dd">Combinatorial&lt; bool, 2, bool, 1 &gt;</a>.</p>
+
+</div>
+</div>
+<a id="abcf0f5f425cd233ea3baa86509c95970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf0f5f425cd233ea3baa86509c95970">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int width&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Component::convert </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab03cfb4394b9a124169d9309a215ceee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03cfb4394b9a124169d9309a215ceee">&#9670;&nbsp;</a></span>DumpSignals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Component::DumpSignals </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classCombinatorial.html#a7355c7151d42748e61fe98214049e364">Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;</a>, <a class="el" href="classCombinatorial.html#a7355c7151d42748e61fe98214049e364">Combinatorial&lt; bool, 2, bool, 1 &gt;</a>, <a class="el" href="classRegister.html#a39f2d3a25c274d5e5daabde296fcbbd1">Register&lt; T &gt;</a>, <a class="el" href="classPort.html#a380b87a6dec90256898657544235ead8">Port&lt; T &gt;</a>, and <a class="el" href="classAndGate.html#ab46bb015e7bdc576958339b7970ba27e">AndGate</a>.</p>
+
+</div>
+</div>
+<a id="ac5a48aa3173fa7af3dffbc4d6374cf20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a48aa3173fa7af3dffbc4d6374cf20">&#9670;&nbsp;</a></span>generate_vcd_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Component::generate_vcd_info </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; std::tuple&lt; std::string, uint16_t &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload if necessary, for dumping signals Goal is to generate waveforms using this. </p>
+
+<p>Implemented in <a class="el" href="classAndGate.html#a77613a75bdd5de0b590da503dcce5a3b">AndGate</a>, <a class="el" href="classCombinatorial.html#a57b224296cd5632d29b4476779f92415">Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;</a>, <a class="el" href="classCombinatorial.html#a57b224296cd5632d29b4476779f92415">Combinatorial&lt; bool, 2, bool, 1 &gt;</a>, <a class="el" href="classRegister.html#aa4fc222db1b9ae88454cc24f69428196">Register&lt; T &gt;</a>, and <a class="el" href="classPort.html#a61ff8c8a045ae45e081f8264021014e0">Port&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -295,47 +361,17 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset the component. </p>
-<p>Resets the component back to the initial value, and calls <a class="el" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95" title="Initialize vales for the component.">Init()</a> </p><dl class="section note"><dt>Note</dt><dd>Should be called only if necessary, and after <a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Reset propogation is done automatically, and <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> will be called on all connected Components. </dd></dl>
+<p>Asynchronous Reset. </p>
+<p>Resets the component back to the initial value, and calls Init() </p><dl class="section note"><dt>Note</dt><dd>Should be called only if necessary, and after Setup() </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Setup() </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Reset propogation is done automatically, and <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Asynchronous Reset.">Reset()</a> will be called on all connected Components. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Register&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a72f7d069a1384b7a06cb194ce51dd059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f7d069a1384b7a06cb194ce51dd059">&#9670;&nbsp;</a></span>Setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Component::Setup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets up the <a class="el" href="classComponent.html" title="Describes a basic element of simulation.">Component</a>. </p>
-<p>Sets up all the connections between components. </p><dl class="section attention"><dt>Attention</dt><dd>Should be called only once at the start </dd></dl>
-
-<p>Implemented in <a class="el" href="classRegister.html#ae5763bc252be48dcc40d2ff77f7a0d8a">Register&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRegister.html#a7c5ebba32fcba3f7aeba4cf93ab1d32d">Register&lt; T &gt;</a>, <a class="el" href="classPort.html#a3ca21610e11d4a9de3c3239a5d9d6f66">Port&lt; T &gt;</a>, <a class="el" href="classCombinatorial.html#a3d9efc428fd28524a3eb6e4604605bed">Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;</a>, and <a class="el" href="classCombinatorial.html#a3d9efc428fd28524a3eb6e4604605bed">Combinatorial&lt; bool, 2, bool, 1 &gt;</a>.</p>
 
 </div>
 </div>
-<a id="abda56474d6ccfbdab47cb5e0cd595c2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abda56474d6ccfbdab47cb5e0cd595c2b">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="af07d4503ca5c2fb1564fdd2a63598d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07d4503ca5c2fb1564fdd2a63598d8b">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +382,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void Component::Update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>clock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -360,16 +397,16 @@ Static Public Attributes</h2></td></tr>
 <p>Updates state info. </p>
 <p>for the component</p>
 <p>At the rising egde of the clock, the state information of the component needs to be updated. this method is used to update the state. </p><dl class="section note"><dt>Note</dt><dd>Should be called every clock - this simulates the pos-edge of clock. </dd></dl>
-<dl class="section attention"><dt>Attention</dt><dd>Should be called only after ( <a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> or <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> ) and <a class="el" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95" title="Initialize vales for the component.">Init()</a> </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classComponent.html#a72f7d069a1384b7a06cb194ce51dd059" title="Sets up the Component.">Setup()</a> <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Reset the component.">Reset()</a> <a class="el" href="classComponent.html#a0bb954fe977d71269e2db01bc8a77e95" title="Initialize vales for the component.">Init()</a> </dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Should be called only after ( Setup() or <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Asynchronous Reset.">Reset()</a> ) </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Setup() <a class="el" href="classComponent.html#a231f37626a6760c59fe4cd2a52222694" title="Asynchronous Reset.">Reset()</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classRegister.html#abe7f49d6bb902ae892900d5c0647b3d3">Register&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRegister.html#af6f808f3026da6e1e6a841a37beb7e12">Register&lt; T &gt;</a>, <a class="el" href="classPort.html#ad36a4afe99d80f40598e4975b4819fad">Port&lt; T &gt;</a>, <a class="el" href="classCombinatorial.html#a8fc4a175ccdb39ebb0014534dddd81bf">Combinatorial&lt; IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT &gt;</a>, <a class="el" href="classCombinatorial.html#a8fc4a175ccdb39ebb0014534dddd81bf">Combinatorial&lt; bool, 2, bool, 1 &gt;</a>, and <a class="el" href="classAndGate.html#aaa31c2721d193bc839036ef8286119e0">AndGate</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a164be500ad3e4881e000d551e8c0b21c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a164be500ad3e4881e000d551e8c0b21c">&#9670;&nbsp;</a></span>id_</h2>
+<a id="a8a87b06d1bc7c180e00ad4297118b1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a87b06d1bc7c180e00ad4297118b1f4">&#9670;&nbsp;</a></span>signal_dumper</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +415,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t Component::id_ = 0</td>
+          <td class="memname"><a class="el" href="classVcdGen_1_1VcdGenerator.html">VcdGen::VcdGenerator</a> Component::signal_dumper {}</td>
         </tr>
       </table>
   </td>
@@ -388,11 +425,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Object which helps with dumping the VCD. </p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="Component_8h_source.html">Component.h</a></li>
-<li>include/<a class="el" href="Component_8cpp.html">Component.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

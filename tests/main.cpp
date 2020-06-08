@@ -1,12 +1,14 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 
-#include <iostream>
 #include <ClockSim.h>
+
+#include <iostream>
 #include <stdlib.h>
 #include <list>
 #include <tuple>
 
+/// Basic test - tests compilation
 bool Simulate() {
     
     Register<int>("Reg", 10);
@@ -27,7 +29,7 @@ public:
     , config_done_(false) {
 
         srand (0);
-    }
+    }    
 
     void Configure(Port<bool>* in_1, Port<bool>* in_2, Port<bool>* out)
     {
@@ -84,12 +86,14 @@ public:
     }
 };
 
+/// Simulates a 2 Input 1 output AND gate
 bool Simulate_And()
 {
 
     // 1. Create a top level module
-    // 2. Add an And Gate logic
-    // 3. Simulate and get result of 2 random inputs.
+    // 2. Add the And Gate logic to the module
+    // 3. Add the top level module to the simulator
+    // 4. Run Simulation
 
     Module top ("TOP_LEVEL", true);
 
@@ -104,15 +108,19 @@ bool Simulate_And()
 
     Simulator And_Sim(&top, 100, true);
 
-    if( And_Sim.Run() == SIMULATOR_STATUS::SUCCESS )
-    {
-        std::cout << "SUCCESSFUL RUN\n";
+    if( And_Sim.Run() == SIMULATOR_STATUS::SUCCESS ) {
+        return true;    
+    } else {
+        return false;
     }
-
-    return true;
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///
+///   Catch-2 test cases
+///
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 TEST_CASE( "Basic", "[Simulate]" ) {
     REQUIRE( Simulate() == true );
@@ -122,4 +130,3 @@ TEST_CASE( "Basic", "[Simulate]" ) {
 TEST_CASE( "And Gate", "[Simulate_And]" ) {
     REQUIRE( Simulate_And() == true );
 }
-

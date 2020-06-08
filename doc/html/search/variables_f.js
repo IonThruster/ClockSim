@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['value_1335',['value',['../classCatch_1_1Detail_1_1IsStreamInsertable.html#a42818b09ae5851126a70ee263769e309',1,'Catch::Detail::IsStreamInsertable::value()'],['../structCatch_1_1is__range.html#afaec39e819c3956829cbbd00feba11be',1,'Catch::is_range::value()']]]
+  ['tags_1414',['tags',['../structCatch_1_1NameAndTags.html#a74062ed1138834a348424eb7ed900c57',1,'Catch::NameAndTags::tags()'],['../structCatch_1_1TestCaseInfo.html#a150a7cbca1dd0c91799ccb14ff822eb0',1,'Catch::TestCaseInfo::tags()']]],
+  ['testcases_1415',['testCases',['../structCatch_1_1Totals.html#adb195fe477aedee2ecea88c888f16506',1,'Catch::Totals']]],
+  ['type_1416',['type',['../structCatch_1_1MessageInfo.html#ae928b9117465c696e45951d9d0284e78',1,'Catch::MessageInfo']]]
 ];

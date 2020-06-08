@@ -12,7 +12,7 @@
 /// A system consists of Components connected using Nodes.
 class Component 
 {
-    // std::string name_;
+    std::string name_;
     bool construct_done_;
     bool init_done_;
 
@@ -24,10 +24,9 @@ protected :
       return std::bitset<width>(val).to_string();
     }
 
-public :
+public :    
 
-    std::string name_;
-
+    /// Object which helps with dumping the VCD
     static VcdGen::VcdGenerator signal_dumper;
 
     /// constructor with name, id

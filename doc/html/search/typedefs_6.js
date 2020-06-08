@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['size_5ftype_1345',['size_type',['../classCatch_1_1StringRef.html#a06b4db8fc82b197004291cf370b2ba7c',1,'Catch::StringRef']]],
-  ['stringmatcher_1346',['StringMatcher',['../namespaceCatch.html#aba438977e831821a2eeca82b9b4f4af2',1,'Catch']]]
+  ['result_5ftype_1429',['result_type',['../classCatch_1_1SimplePcg32.html#a220ca38f6d16804c6e99937a673ec3ff',1,'Catch::SimplePcg32']]]
 ];

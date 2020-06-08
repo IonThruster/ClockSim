@@ -10,6 +10,11 @@ var hierarchy =
     [ "Catch::CaseSensitive", "structCatch_1_1CaseSensitive.html", null ],
     [ "Catch_global_namespace_dummy", "structCatch__global__namespace__dummy.html", null ],
     [ "Component", "classComponent.html", [
+      [ "Combinatorial< IN_TYPE, NUM_IN, OUT_TYPE, NUM_OUT >", "classCombinatorial.html", null ],
+      [ "Combinatorial< bool, 2, bool, 1 >", "classCombinatorial.html", [
+        [ "AndGate", "classAndGate.html", null ]
+      ] ],
+      [ "Port< T >", "classPort.html", null ],
       [ "Register< T >", "classRegister.html", null ]
     ] ],
     [ "Catch::Counts", "structCatch_1_1Counts.html", null ],
@@ -129,6 +134,7 @@ var hierarchy =
     [ "Catch::MessageStream", "structCatch_1_1MessageStream.html", [
       [ "Catch::MessageBuilder", "structCatch_1_1MessageBuilder.html", null ]
     ] ],
+    [ "Module", "classModule.html", null ],
     [ "Catch::NameAndTags", "structCatch_1_1NameAndTags.html", null ],
     [ "Catch::NonCopyable", "classCatch_1_1NonCopyable.html", [
       [ "Catch::AutoReg", "structCatch_1_1AutoReg.html", null ],
@@ -148,6 +154,7 @@ var hierarchy =
     [ "Catch::SectionInfo", "structCatch_1_1SectionInfo.html", null ],
     [ "Catch::ShowDurations", "structCatch_1_1ShowDurations.html", null ],
     [ "Catch::SimplePcg32", "classCatch_1_1SimplePcg32.html", null ],
+    [ "Simulator", "classSimulator.html", null ],
     [ "Catch::SourceLineInfo", "structCatch_1_1SourceLineInfo.html", null ],
     [ "Catch::StreamEndStop", "structCatch_1_1StreamEndStop.html", null ],
     [ "Catch::StringMaker< T, typename >", "structCatch_1_1StringMaker.html", null ],
@@ -192,6 +199,7 @@ var hierarchy =
       [ "Catch::true_given< typename >", "structCatch_1_1true__given.html", null ]
     ] ],
     [ "Catch::UseColour", "structCatch_1_1UseColour.html", null ],
+    [ "VcdGen::VcdGenerator", "classVcdGen_1_1VcdGenerator.html", null ],
     [ "Catch::WaitForKeypress", "structCatch_1_1WaitForKeypress.html", null ],
     [ "Catch::WarnAbout", "structCatch_1_1WarnAbout.html", null ]
 ];

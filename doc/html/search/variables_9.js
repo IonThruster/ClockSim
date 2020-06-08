@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['name_1319',['name',['../structCatch_1_1NameAndTags.html#a7cbea60e0cebfa622c667008eb011420',1,'Catch::NameAndTags::name()'],['../structCatch_1_1SectionInfo.html#a704c8fc662d309137e0d4f199cb7df58',1,'Catch::SectionInfo::name()'],['../structCatch_1_1TestCaseInfo.html#a463794e2f5cfead307c93efd134ade36',1,'Catch::TestCaseInfo::name()']]]
+  ['m_5fcachedtostring_1382',['m_cachedToString',['../classCatch_1_1Matchers_1_1Impl_1_1MatcherUntypedBase.html#a951095c462657e7097a9a6dc4dde813f',1,'Catch::Matchers::Impl::MatcherUntypedBase']]],
+  ['m_5fcasesensitivity_1383',['m_caseSensitivity',['../structCatch_1_1Matchers_1_1StdString_1_1CasedString.html#ae1c2864c986941536a6e94cca0528f92',1,'Catch::Matchers::StdString::CasedString']]],
+  ['m_5fcomparator_1384',['m_comparator',['../structCatch_1_1Matchers_1_1StdString_1_1StringMatcherBase.html#a17c9f0fe40587070ffe998c193742831',1,'Catch::Matchers::StdString::StringMatcherBase::m_comparator()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsElementMatcher.html#adecd94fee58a2fea0fc6d4d62a7a95ee',1,'Catch::Matchers::Vector::ContainsElementMatcher::m_comparator()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsMatcher.html#a76f6a1d34cfe94e506fc44175fc2981d',1,'Catch::Matchers::Vector::ContainsMatcher::m_comparator()'],['../structCatch_1_1Matchers_1_1Vector_1_1EqualsMatcher.html#aaa9099439a6f553fe47ff5ac2fdf3b3c',1,'Catch::Matchers::Vector::EqualsMatcher::m_comparator()'],['../structCatch_1_1Matchers_1_1Vector_1_1ApproxMatcher.html#a482a43ccf47697830d23bf0beaf06b9b',1,'Catch::Matchers::Vector::ApproxMatcher::m_comparator()']]],
+  ['m_5fcount_1385',['m_count',['../structCatch_1_1pluralise.html#a4dce2fa13ec6f00fac09b2418265441e',1,'Catch::pluralise']]],
+  ['m_5finfo_1386',['m_info',['../structCatch_1_1MessageBuilder.html#a979f1c2b36d78f80ee275bfa5ba0209f',1,'Catch::MessageBuilder::m_info()'],['../classCatch_1_1ScopedMessage.html#ae6e1476f389cc6e1586f033b3747b27b',1,'Catch::ScopedMessage::m_info()']]],
+  ['m_5fisbinaryexpression_1387',['m_isBinaryExpression',['../structCatch_1_1ITransientExpression.html#a75ce48da824d514d08152d396abb28d8',1,'Catch::ITransientExpression']]],
+  ['m_5flabel_1388',['m_label',['../structCatch_1_1pluralise.html#a8849cbdd3f11ebe7747597c8644e8793',1,'Catch::pluralise']]],
+  ['m_5fmatchers_1389',['m_matchers',['../structCatch_1_1Matchers_1_1Impl_1_1MatchAllOf.html#a98d6a2611f195a4a5c49f92fd877be9a',1,'Catch::Matchers::Impl::MatchAllOf::m_matchers()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchAnyOf.html#a1fb1119e6110dc15b8d5262ec0aeddd5',1,'Catch::Matchers::Impl::MatchAnyOf::m_matchers()']]],
+  ['m_5fmoved_1390',['m_moved',['../classCatch_1_1ScopedMessage.html#a4fe5607c1f7407240a0da8405b1c12e7',1,'Catch::ScopedMessage']]],
+  ['m_5fname_1391',['m_name',['../structCatch_1_1Detail_1_1EnumInfo.html#a16ecfd3a7e11439433aabbdf6ecb676c',1,'Catch::Detail::EnumInfo']]],
+  ['m_5foperation_1392',['m_operation',['../structCatch_1_1Matchers_1_1StdString_1_1StringMatcherBase.html#a7a25c4b7d863e9a1c406d81efd0f83ca',1,'Catch::Matchers::StdString::StringMatcherBase']]],
+  ['m_5fresult_1393',['m_result',['../structCatch_1_1ITransientExpression.html#a4646e2b5e0156e913653ec3b9b60c942',1,'Catch::ITransientExpression']]],
+  ['m_5fstr_1394',['m_str',['../structCatch_1_1Matchers_1_1StdString_1_1CasedString.html#ad05dbc99aba3c3c386d6b856b213f911',1,'Catch::Matchers::StdString::CasedString']]],
+  ['m_5fstream_1395',['m_stream',['../structCatch_1_1MessageStream.html#a9202520faed8882ef469db9f353ec578',1,'Catch::MessageStream']]],
+  ['m_5funderlyingmatcher_1396',['m_underlyingMatcher',['../structCatch_1_1Matchers_1_1Impl_1_1MatchNotOf.html#af7ac67f112b0e93796b048a47329aad4',1,'Catch::Matchers::Impl::MatchNotOf']]],
+  ['m_5fvalues_1397',['m_values',['../structCatch_1_1Detail_1_1EnumInfo.html#ad65c0537a50d375859295a2c18ade489',1,'Catch::Detail::EnumInfo']]],
+  ['macroname_1398',['macroName',['../structCatch_1_1AssertionInfo.html#aaf3fbb9f1fe09c879ba3d877584e3056',1,'Catch::AssertionInfo::macroName()'],['../structCatch_1_1MessageInfo.html#a3ee7cd41def0989d2193bad7101436a0',1,'Catch::MessageInfo::macroName()']]],
+  ['message_1399',['message',['../structCatch_1_1MessageInfo.html#ab6cd06e050bf426c6577502a5c50e256',1,'Catch::MessageInfo']]]
 ];

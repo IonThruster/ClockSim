@@ -31,6 +31,7 @@ var NAVTREE =
       [ "SubSub Title", "index.html#autotoc_md3", null ]
     ] ],
     [ "Title of Subsystem", "Subsystem_1.html", "Subsystem_1" ],
+    [ "CycleSim", "md_README.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -61,6 +62,7 @@ var NAVTREE =
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
@@ -70,10 +72,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CMakeCCompilerId_8c.html",
-"catch_8hpp.html#aaff4fdf9d9447a3e896ff3c940aa63bf",
-"classCatch_1_1Generators_1_1RepeatGenerator.html#a24d5c2b1c09d6d220d4bd4c83f222dcb",
-"index.html",
-"structCatch_1_1Matchers_1_1Vector_1_1ApproxMatcher.html#a619714cd68a4791584e040902bff583c"
+"catch_8hpp.html#aa50cacf2bbca5f9ddd2625403e649799",
+"classCatch_1_1Generators_1_1Generators.html#a2bcb50c42a8729cbac079b3b61699a61",
+"functions_func.html",
+"structCatch_1_1IRunner.html#a5f539a88a7772d68de8a2e4028774209",
+"structCatch_1_1WaitForKeypress.html#a2e8c4369d0a605d64e3e83b5af3399baad6c3e4a5797b7ee0a812e4fc88128983"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

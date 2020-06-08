@@ -9,14 +9,21 @@
 template <typename T>
 class Register : public Component
 {
+    /// Flop Capacity
     const size_t kCapacity_;
+
+    /// Value in the flop
     std::vector<T> values_;
+
+    /// Input ports
     Port<T>* in_;
+
+    /// Output Ports
     Port<T>* out_;
 
 public :
 
-    /// Single Flop
+    /// Ctor.
     Register(std::string name)
     	: Register(name, 1, 1) {
 		}
@@ -62,11 +69,12 @@ public :
       } 
 		}
 
+    /// VCD Signal declaration info (TODO)
     virtual void generate_vcd_info(std::list< std::tuple<std::string, uint16_t> > &) { };
 
+    /// VCD Signal Dumping info (TODO)
     virtual void DumpSignals(std::string) { };
 
-    ~Register()
-		{
-		}
+    /// Dtor.
+    ~Register(){ }
 };

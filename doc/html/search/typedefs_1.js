@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['exceptiontranslatefunction_1338',['exceptionTranslateFunction',['../namespaceCatch.html#ae8d8673884dc36b98875106322a2a37b',1,'Catch']]],
-  ['exceptiontranslators_1339',['ExceptionTranslators',['../namespaceCatch.html#a7ad07967e688fdc03cf784f58be4b741',1,'Catch']]]
+  ['const_5fiterator_1422',['const_iterator',['../classCatch_1_1StringRef.html#ac3aa3d16f48b5429a480f823c504f93c',1,'Catch::StringRef']]]
 ];

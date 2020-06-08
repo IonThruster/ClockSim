@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['end_1287',['end',['../namespaceCatch.html#a71fef6a57614eb2d9751f8586ff6de6a',1,'Catch']]],
-  ['error_1288',['error',['../structCatch_1_1Totals.html#a6ea14c7de7ea735a14f172a26e08a239',1,'Catch::Totals']]]
+  ['description_1366',['description',['../structCatch_1_1SectionInfo.html#a0052060219a6de74bb7ade34d4163a4e',1,'Catch::SectionInfo::description()'],['../structCatch_1_1TestCaseInfo.html#a37fe2db9425bc45f6a33893eac31198e',1,'Catch::TestCaseInfo::description()']]],
+  ['durationinseconds_1367',['durationInSeconds',['../structCatch_1_1SectionEndInfo.html#a7c262f2dab9cff166b8eca620c47eea5',1,'Catch::SectionEndInfo']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['result_5ftype_1344',['result_type',['../classCatch_1_1SimplePcg32.html#a220ca38f6d16804c6e99937a673ec3ff',1,'Catch::SimplePcg32']]]
+  ['iconfigptr_1427',['IConfigPtr',['../namespaceCatch.html#afd20a5d4f9d2f4d525db81a7765367b0',1,'Catch']]],
+  ['ireporterfactoryptr_1428',['IReporterFactoryPtr',['../namespaceCatch.html#ad1b36ac40c2739e52fd453dcdddf0d09',1,'Catch']]]
 ];
