@@ -1,11 +1,11 @@
-# CycleSim
+# ClockSim
 
 Clock Based Cycle Accurate Simulation using all best practices
 
 Some highlights : 
 1. Uses Cmake
 2. Uses Unit testing using Catch
-3. Uses Modern C++11 techniques, Idioms, patterns.
+3. Uses Modern C++11 techniques, Idioms, patterns as much as possible.
 
 Goals : 
 1. Enable rapid prototyping of Architectures
