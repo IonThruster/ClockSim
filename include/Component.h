@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vcdgen.h>
+#include "vcdgen.h"
 #include <bitset>
 #include <string>
 #include <list>
@@ -12,11 +12,12 @@
 /// A system consists of Components connected using Nodes.
 class Component 
 {
-    std::string name_;
     bool construct_done_;
     bool init_done_;
 
 protected :    
+
+    std::string name_;
     
     template<typename T, int width>
     inline std::string convert(T val)
