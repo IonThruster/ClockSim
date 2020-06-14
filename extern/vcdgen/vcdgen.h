@@ -264,6 +264,10 @@ namespace VcdGen
             final_output += "#" + std::to_string(clock) + "\n";
         }
 
+        /// Initializes the inputs
+        /// 
+        /// Since this Class will likely be a singleton
+        /// This method provides a way to Reset the members.
         void Init()
         {
             file_name = "";
