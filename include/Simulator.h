@@ -21,6 +21,9 @@ class Simulator
     /// Note Simulation will be significantly slower in this case.
     bool enable_vcd_;
 
+    /// VCD file name
+    std::string vcd_filename_;
+
 public:
 
     /// Ctor.
@@ -38,10 +41,11 @@ public:
     /// @param m Pointer to the top level module
     /// @param max_time Maximum simulation time allowed
     /// @param enable_vcd Is Waveform Dumping enabled
-    Simulator(Module* m, size_t max_time, bool enable_vcd = false)
+    Simulator(Module* m, size_t max_time, bool enable_vcd = false, std::string filename="")
     : top_level_(m)
     , max_sim_time_(max_time)
     , enable_vcd_(enable_vcd)
+    , vcd_filename_(filename)
     { }
 
     /// Runs the simulation for max_sim_time clock cycles    
@@ -59,7 +63,7 @@ public:
 
         if( enable_vcd_ )
         {
-            top_level_->dump_vcd();            
+            top_level_->dump_vcd(vcd_filename_);            
         }
 
         return SIMULATOR_STATUS::SUCCESS;

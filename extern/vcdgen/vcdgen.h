@@ -39,6 +39,7 @@ without including the above copyright and permission notices.
 #include <cstdint>
 #include <vector>
 #include <array>
+#include <fstream>
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 namespace VcdGen
@@ -50,6 +51,10 @@ namespace VcdGen
 
         /// Final string output
         std::string final_output;
+        
+        /// File to write the final output (optional)
+        /// If no file name is mentioned - output will be to STDOUT
+        std::string file_name;
 
         /// Software Version
         const float version = 0.1;
@@ -156,8 +161,16 @@ namespace VcdGen
             }
         }
 
+        void list_signals()
+        {
+            for( const auto& kv_pair : signal_width_map) 
+            {
+                std::cout << "SIGNAL : " << kv_pair.first << " ; WIDTH : " << kv_pair.second << "\n";
+            }
+        }
 
-        public :
+
+    public :
 
         /// Default constructor
         VcdGenerator() 
@@ -168,6 +181,17 @@ namespace VcdGen
             symbol_chars = {'!', '@', '#', '$', '%', '^', '&', '*', '\''};
             update_next_symbol();
         }
+
+        VcdGenerator(std::string filename)
+            : VcdGenerator()
+        {
+            file_name = filename; 
+        }
+
+        void set_filename(std::string filename) 
+        {
+            file_name = filename;
+        } 
 
         /// Adds a module to the current hierarchy (declaration)
         ///
@@ -221,7 +245,9 @@ namespace VcdGen
         void dump_signal(std::string signal_name, std::string value)
         {
             if ( signal_symbol_map.count(signal_name) == 0 ) {
-                std::cout << "ERROR : Unregisterd Signal name" << std::endl;
+                std::cout << "ERROR : Unregistered Signal name : " << signal_name 
+                          << "\nExiting..." << std::endl;
+                list_signals();
                 exit(0);
             } else {
                 if (signal_width_map[signal_name] == 1 ) {
@@ -238,12 +264,28 @@ namespace VcdGen
             final_output += "#" + std::to_string(clock) + "\n";
         }
 
+        void Init()
+        {
+            VcdGenerator();
+            file_name = "";
+            final_output = "";
+            signal_symbol_map.clear();
+            signal_width_map.clear();
+        }
+
         /// Prints to the console the constructed vcd (until this point)
         void dump_vcd()
         {
-            std::cout << final_output;
+            if( file_name.length() > 0 ) {
+                std::ofstream file;
+                file.open(file_name);
+                std::cout << "Writing To file : " << file_name << "\n";
+                file << final_output;
+                file.close();
+            } else {
+                std::cout << final_output;
+            }
         }
-
     };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,5 +1,5 @@
-#add_executable(sim main.cpp)
-#
-#target_link_libraries(sim 
-#                    PRIVATE clocksim
-#                    PRIVATE catch)
+add_library(component_lib INTERFACE)
+
+target_link_libraries(component_lib INTERFACE clocksim)
+
+target_include_directories(component_lib INTERFACE "${CURRENT_CMAKE_SOURCE_DIR}")

@@ -53,7 +53,8 @@ public :
     /// Recursivels calls all sub-components and sub-modules
     void generate_vcd_info()
     {
-        /// STEP 1 : Call Start Module
+        /// STEP 1 : Call Init VCD and Start a new Module
+        Component::Init_vcd();
         Component::signal_dumper.start_module(name_);
 
         /// STEP 2 : Add all the signals
@@ -102,6 +103,23 @@ public :
         m_.push_back(m);
     }
 
+    /// TODO : Initializes things before simulation starts
+    // void Init()
+    // {
+    //    // First Init all the components inside each module
+    //    for (const auto& component : c_)
+    //    {
+    //        component->Init();
+    //    }
+
+    //    // Then update all sub-modules
+    //    // Reason is that this produce a nicer looking VCD dump which is easier to debug
+    //    for (const auto& module : m_)
+    //    {
+    //        module->Init();
+    //    }
+    //}
+
     /// Method that is called every clock
     ///
     /// @param clock Current clock cycle
@@ -111,6 +129,8 @@ public :
         // First update all the components inside each module
         for (const auto& component : c_)
         {
+            component->Update(clock);
+
             if( dump_signals_ )
             {
                 if( top_level_ )
@@ -119,7 +139,6 @@ public :
                 }                
                 component->DumpSignals(prefix_ + name_);
             }
-            component->Update(clock);
         }
 
         // Then update all sub-modules
@@ -131,8 +150,9 @@ public :
     }
 
     /// Dump the VCD to the console (for now)
-    void dump_vcd()
+    void dump_vcd(std::string filename)
     {
+        Component::set_vcd_filename(filename);
         Component::signal_dumper.dump_vcd();
     }
 };

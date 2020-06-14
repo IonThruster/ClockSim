@@ -19,11 +19,11 @@ endif()
 # Add External Libraries
 add_subdirectory(extern)
 
-# App built using ClockSim 
-#include_directories(clocksim_lib)
-
-# Main ClockSim Lib
+# ClockSim
 add_subdirectory(include)
+
+# Component library built using ClockSim 
+include_directories(component_lib)
 
 
 # Testing only available if this is the main app

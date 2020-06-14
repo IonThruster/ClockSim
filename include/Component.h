@@ -67,6 +67,16 @@ public :
 
     virtual void DumpSignals(std::string) = 0;
 
+    /// Set the file name to dump waveforms if needed
+    static void set_vcd_filename(std::string filename)
+    {
+        signal_dumper.set_filename(filename);
+    }
+
+    static void Init_vcd()
+    {
+        signal_dumper.Init();
+    }
 
     /// Destructor
     virtual ~Component() { };

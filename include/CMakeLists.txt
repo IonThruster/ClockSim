@@ -4,6 +4,9 @@ target_link_libraries(clocksim INTERFACE vcdgen)
 
 target_include_directories(clocksim INTERFACE "${CURRENT_CMAKE_SOURCE_DIR}")
 
+### DO THE BELOW IN CASE YOU NEED A SEPERATE LIB
+#
+#
 #add_library(
 #    clocksim SHARED
 #    ClockSim.h
