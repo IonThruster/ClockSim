@@ -13,6 +13,7 @@ class LogicGateBase : public Combinatorial<bool, 2, bool, 1>
 
 protected:
 
+    /// Ensures ports have been setup (used for debugging)
     bool config_done_;
     bool rand_inputs_;
 

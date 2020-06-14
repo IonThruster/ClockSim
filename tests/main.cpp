@@ -12,7 +12,7 @@
 /// Basic test - tests compilation
 bool Simulate() {
     
-    Register<int>("Reg", 10);
+    Register<int, 32, 10> r{"Reg"};
 
     return true;
 }
@@ -93,6 +93,34 @@ bool Simulate_Circuit()
     }
 }
 
+bool Simulate_flop()
+{
+    // 1. Create a top level module
+    // 2. Add the Register / Flop to the module
+    // 3. Add the top level module to the simulator
+    // 4. Run Simulation
+    
+    Module top ("TOP_LEVEL", true);
+
+    using FlopType = int;
+
+    Register<FlopType, 32, 1> r{"Reg", true};
+
+    Port<FlopType> p1 {"in"};
+    Port<bool> p2 {"rst"};
+    Port<FlopType> p3 {"out"};
+
+    r.Configure(&p1, &p2, &p3);
+    top.add(&r);
+
+    Simulator Flop_Sim {&top, 100, true, "flop.vcd"};
+    if( Flop_Sim.Run() == SIMULATOR_STATUS::SUCCESS ) {
+        return true;    
+    } else {
+        return false;
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 ///   Catch-2 test cases
@@ -111,4 +139,8 @@ TEST_CASE( "And Gate", "[Simulate_And]" ) {
 
 TEST_CASE( "Circuit", "[Simulate_Circuit]" ) {
     REQUIRE( Simulate_Circuit() == true );
+}
+
+TEST_CASE( "Flop", "[Simulate_Flop]" ) {
+    REQUIRE( Simulate_flop() == true );
 }

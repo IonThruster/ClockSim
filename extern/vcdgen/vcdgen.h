@@ -57,7 +57,7 @@ namespace VcdGen
         std::string file_name;
 
         /// Software Version
-        const float version = 0.1;
+        const float version = 0.1f;
 
         /// Hash table between Signal Names and Symbols used to dump them 
         std::map<std::string, std::string> signal_symbol_map;
@@ -66,7 +66,7 @@ namespace VcdGen
         std::map<std::string, uint16_t> signal_width_map;
 
         /// character used to form the symbols
-        std::array<char, 9> symbol_chars;
+        std::array<char, 10> symbol_chars;
 
         /// index in the symbol table
         short unsigned int st_idx;
@@ -107,7 +107,6 @@ namespace VcdGen
         /// Ensure that the it will be a unique symbol name
         void update_next_symbol()
         {
-            ++st_idx;
             if( st_idx == symbol_chars.size() )
             {
                 st_idx = 0;
@@ -120,6 +119,7 @@ namespace VcdGen
             {
                 next_symbol += symbol_chars[st_idx];    
             }
+            ++st_idx;
         }
 
         /// Converts the current module name to a string
@@ -178,7 +178,7 @@ namespace VcdGen
             , st_repeats(1)
         {
             call_header();
-            symbol_chars = {'!', '@', '#', '$', '%', '^', '&', '*', '\''};
+            symbol_chars = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')'};
             update_next_symbol();
         }
 
@@ -266,11 +266,15 @@ namespace VcdGen
 
         void Init()
         {
-            VcdGenerator();
             file_name = "";
             final_output = "";
             signal_symbol_map.clear();
             signal_width_map.clear();
+
+            st_idx = 0;
+            st_repeats = 1;
+            call_header();
+            update_next_symbol();
         }
 
         /// Prints to the console the constructed vcd (until this point)
