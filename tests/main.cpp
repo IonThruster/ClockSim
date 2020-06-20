@@ -8,14 +8,15 @@
 #include <stdlib.h>
 #include <list>
 #include <tuple>
+#include "utils.h"
 
 /// Basic test - tests compilation
-bool Simulate() {
-    
-    Register<int, 32, 10> r{"Reg"};
-
-    return true;
-}
+//bool Simulate() {
+//    
+//    Register<int, 32, 10> r{"Reg"};
+//
+//    return true;
+//}
 
 /// Simulates a 2 Input 1 output AND gate
 bool Simulate_And()
@@ -39,7 +40,8 @@ bool Simulate_And()
 
     Simulator And_Sim(&top, 100, true, "andsim.vcd");
 
-    if( And_Sim.Run() == SIMULATOR_STATUS::SUCCESS ) {
+    if( And_Sim.Run() == SIMULATOR_STATUS::SUCCESS && 
+        compare_files("andsim.vcd", "tests/golden/andsim.vcd") ) {
         return true;    
     } else {
         return false;
@@ -86,7 +88,8 @@ bool Simulate_Circuit()
 
     Simulator Circuit_Sim(&top, 100, true, "circuit.vcd");
 
-    if( Circuit_Sim.Run() == SIMULATOR_STATUS::SUCCESS ) {
+    if( Circuit_Sim.Run() == SIMULATOR_STATUS::SUCCESS &&
+        compare_files("circuit.vcd", "tests/golden/circuit.vcd") ) {
         return true;    
     } else {
         return false;
@@ -114,7 +117,8 @@ bool Simulate_flop()
     top.add(&r);
 
     Simulator Flop_Sim {&top, 100, true, "flop.vcd"};
-    if( Flop_Sim.Run() == SIMULATOR_STATUS::SUCCESS ) {
+    if( Flop_Sim.Run() == SIMULATOR_STATUS::SUCCESS &&
+        compare_files("flop.vcd", "tests/golden/flop.vcd") ) {
         return true;    
     } else {
         return false;
@@ -127,9 +131,9 @@ bool Simulate_flop()
 ///
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-TEST_CASE( "Basic", "[Simulate]" ) {
-    REQUIRE( Simulate() == true );
-}
+//TEST_CASE( "Basic", "[Simulate]" ) {
+//    REQUIRE( Simulate() == true );
+//}
 
 
 TEST_CASE( "And Gate", "[Simulate_And]" ) {
